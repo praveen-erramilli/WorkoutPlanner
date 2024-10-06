@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Plan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #workoutPlan {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        iframe {
+            width: 100%;
+            height: 200px;
+            margin-top: 10px;
+        }
+        .exercise {
+            margin-bottom: 20px;
+        }
+        .exercise strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Gayathri's Workout Plan</h2>
+    <button onclick="showWorkout('Day 1')">Sunday: Lower Body</button>
+    <button onclick="showWorkout('Day 2')">Monday: Upper Body</button>
+    <button onclick="showWorkout('Day 3')">Wednesday: Core and Abs</button>
+    <button onclick="showWorkout('Day 4')">Friday: Full Body</button>
+
+    <div id="workoutPlan"></div>
+</div>
+
+<script>
+    function showWorkout(day) {
+        let plan = '';
+
+        switch (day) {
+            case 'Day 1':
+                plan = `
+                <div class="exercise">
+                    <strong>Warm-up (5-10 minutes):</strong> 
+                    Treadmill or elliptical at a moderate pace.
+                </div>
+                <div class="exercise">
+                    <strong>Squats – 4 sets of 12 reps</strong>
+                    <iframe src="https://www.youtube.com/embed/aclHkVaku9U" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="exercise">
+                    <strong>Lunges – 3 sets of 12 reps per leg</strong>
+                    <iframe src="https://www.youtube.com/embed/QOVaHwm-Q6U" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="exercise">
+                    <strong>Leg Press – 3 sets of 10-12 reps</strong>
+                    <iframe src="https://youtube.com/embed/ahaJTts1f3s" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="exercise">
+                    <strong>Glute Bridges – 3 sets of 15 reps</strong>
+                    <iframe src="https://www.youtube.com/embed/wPM8icPu6H8" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="exercise">
+                    <strong>Romanian Deadlifts – 3 sets of 10 reps</strong>
+                    <iframe src="https://www.youtube.com/embed/JCXUYuzwNrM" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="exercise">
+                    <strong>Calf Raises – 3 sets of 15 reps</strong>
+                    <iframe src="https://www.youtube.com/embed/fOfPwmb5FXU" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="exercise">
+                    <strong>Cardio: 15-20 minutes of moderate-intensity cycling or walking on an incline.</strong>
+                </div>`;
+                break;
+            
+            case 'Day 2':
+                plan = `
+                <div class="exercise">
+                    <strong>Warm-up (5-10 minutes):</strong> 
+                    Rowing machine or treadmill.
+                </div>
+                <div class="exercise">
+                    <strong>Lat Pulldowns – 3 sets of 10-12 reps</strong>
+                    <iframe src="https://www.youtube.com/embed/CAwf7n6Luuc" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="exercise">
+                    <strong>Dumbbell Rows – 3 sets of 10-12 reps per arm</strong>
+                    <iframe src="https://www.youtube.com/embed/kBWAon7ItDw" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="exercise">
+                    <strong>Shoulder Press – 3 sets of 10 reps</strong>
+                    <iframe src="https://www.youtube.com/embed/B-aVuyhvLHU" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="exercise">
+                    <strong>Dumbbell Bicep Curls – 3 sets of 12 reps</strong>
+                    <iframe src="https://www.youtube.com/embed/ykJmrZ5v0Oo" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="exercise">
+                    <strong>Tricep Dips – 3 sets of 12 reps</strong>
+                    <iframe src="https://www.youtube.com/embed/0326dy_-CzM" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="exercise">
+                    <strong>Lateral Raises – 3 sets of 12 reps</strong>
+                    <iframe src="https://www.youtube.com/embed/3VcKaXpzqRo" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="exercise">
+                    <strong>Cardio: 10-15 minutes of moderate-intensity elliptical or brisk walking.</strong>
+                </div>`;
+                break;
+
+            case 'Day 3':
+                plan = `
+                <div class="exercise">
+                    <strong>Warm-up (5-10 minutes):</strong> 
+                    Light jogging or stair climber.
+                </div>
+                <div class="exercise">
+                    <strong>Plank – 3 sets of 45 seconds to 1 minute</strong>
+                    <iframe src="https://www.youtube.com/embed/pSHjTRCQxIw" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="exercise">
+                    <strong>Bicycle Crunches – 3 sets of 20 reps</strong>
+                    <iframe src="https://www.youtube.com/embed/Iwyvozckjak" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="exercise">
+                    <strong>Leg Raises – 3 sets of 15 reps</strong>
+                    <iframe src="https://www.youtube.com/embed/JB2oyawG9KI" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="exercise">
+                    <strong>Russian Twists – 3 sets of 20 reps per side</strong>
+                    <iframe src="https://www.youtube.com/embed/wkD8rjkodUI" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="exercise">
+                    <strong>Mountain Climbers – 3 sets of 30 seconds</strong>
+                    <iframe src="https://www.youtube.com/embed/cnyTQDSE884" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="exercise">
+                    <strong>V-Ups – 3 sets of 12 reps</strong>
+                    <iframe src="https://www.youtube.com/embed/Iwyvozckjak" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="exercise">
+                    <strong>Cardio: HIIT – 20 minutes alternating between 30 seconds of sprinting and 1 minute of slow walking/jogging.</strong>
+                </div>`;
+                break;
+
+            case 'Day 4':
+                plan = `
+                <div class="exercise">
+                    <strong>Warm-up (5-10 minutes):</strong> 
+                    Rowing or elliptical.
+                </div>
+                <div class="exercise">
+                    <strong>Deadlifts – 3 sets of 10 reps</strong>
+                    <iframe src="https://www.youtube.com/embed/op9kVnSso6Q" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="exercise">
+                    <strong>Push-ups – 3 sets of 12 reps</strong>
+                    <iframe src="https://www.youtube.com/embed/IODxDxX7oi4" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="exercise">
+                    <strong>Kettlebell Swings – 3 sets of 15 reps</strong>
+                    <iframe src="https://www.youtube.com/embed/RU88iqRVunk" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="exercise">
+                    <strong>Dumbbell Squat to Press – 3 sets of 12 reps</strong>
+                    <iframe src="https://www.youtube.com/embed/x0lCCVMSLCg" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="exercise">
+                    <strong>Step-Ups with Dumbbells – 3 sets of 10 reps per leg</strong>
+                    <iframe src="https://www.youtube.com/embed/z9m8nxv3o1A" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="exercise">
+                    <strong>Renegade Rows – 3 sets of 10 reps per side</strong>
+                    <iframe src="https://www.youtube.com/embed/21_BflEy3zA" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="exercise">
+                    <strong>Cardio: 20-25 minutes of moderate-intensity cardio (treadmill, cycling, or elliptical).</strong>
+                </div>`;
+                break;
+
+            default:
+                plan = 'Rest day or light stretching.';
+        }
+
+        document.getElementById('workoutPlan').innerHTML = plan;
+    }
+</script>
+
+</body>
+</html>
